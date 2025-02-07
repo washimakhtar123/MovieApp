@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const BannerHome = () => {
   const bannerData = useSelector((state) => state.movieoData.bannerData);
@@ -46,10 +47,12 @@ const BannerHome = () => {
                 <span>|</span>
                 <p>👁️ {Number(data.popularity).toFixed(0)}</p>
               </div>
-
+              <Link to={"/"+data?.media_type+"/"+data.id} > 
               <button className="bg-white text-black px-6 py-3 font-bold rounded-md mt-4 shadow-lg transition-all hover:scale-105 hover:bg-gradient-to-l hover:from-red-700 hover:to-orange-500 hover:text-white">
                 Play Now
               </button>
+              </Link>
+             
             </div>
           </div>
         ))}
