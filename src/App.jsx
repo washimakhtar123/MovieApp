@@ -6,6 +6,7 @@ import MobileNavigation from "./components/MobileNavigation";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { setBannerData,setImageURL } from "./store/movieoSlice";
+import VideoPlay from "./components/VideoPlay";
 
 const App = () => {
 const dispatch=useDispatch();
